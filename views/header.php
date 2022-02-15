@@ -7,7 +7,16 @@
                 <p>ABARROTES VILLA</p>
             </div>
             <div class="cabecera-buscador">
-                <input class="form-control" type="text" placeholder="Buscar producto..." aria-label="default input example">
+                <!-- <input class="form-control" type="text" placeholder="Buscar producto..." aria-label="default input example"> -->
+                <input type="text" name="" id="" placeholder=" Buscar producto...">
+            </div>
+            <div class="cabecera-derecha">
+                <div class="cabecera-login">
+                    <img src="assets/img/user-alt.png" alt="Inicio de sesión" width="30px" height="30px">
+                </div>
+                <div class="cabecera-carrito">
+                    <img src="assets/img/shopping-cart.png" alt="Carrito" width="30px" height="30px">
+                </div>
             </div>
         </div>
     </nav>

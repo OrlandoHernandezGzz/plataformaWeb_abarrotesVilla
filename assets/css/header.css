@@ -17,6 +17,10 @@ body {
     height: 100px;
 }
 
+.cabecera .container {
+    height: 100px;
+}
+
 .cabecera-logo {
     width: 250px;
     float: left;
@@ -28,10 +32,42 @@ body {
     margin-top: 40px;
 }
 
+/* .cabecera .form-control {
+    width: 400px;
+    position: relative;
+    top: 30px;
+    left: 100px
+} */
+
 .cabecera-buscador {
     width: 400px;
     margin: auto;
-    padding: 30px;
+    position: relative;
+    top: 35px;
+    left: 50px;
+}
+
+.cabecera-buscador input {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.cabecera-derecha {
+    float: right;
+    width: 100px;
+    position: relative;
+    top: 5px;
+}
+
+ .cabecera-login {
+    float: left;
+    width: 30px;
+}
+
+.cabecera-carrito {
+    float: right;
+    width: 30px;
 }
 
 /* Encabezado secundario */
