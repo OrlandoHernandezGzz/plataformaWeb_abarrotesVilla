@@ -24,10 +24,14 @@
       </div>
       <div class="cabecera-derecha">
         <div class="cabecera-login">
-          <img src="assets/img/user-alt.png" alt="Inicio de sesión" width="30px" height="30px">
+          <a href="#">
+              <img src="assets/img/user-alt.png" alt="Inicio de sesión" width="30px" height="30px">
+          </a>  
         </div>
         <div class="cabecera-carrito">
-          <img src="assets/img/shopping-cart.png" alt="Carrito" width="30px" height="30px">
+            <a href="#">
+                <img src="assets/img/shopping-cart.png" alt="Carrito" width="30px" height="30px">
+            </a>
         </div>
       </div>
     </div>
@@ -37,10 +41,10 @@
   <nav class="nav-enlaces">
     <div class="container">
       <ul class="nav-enlaces-ul">
-        <li><a href="">Cotiza en línea</a></li>
+        <li><a href="#">Cotiza en línea</a></li>
         <li><a href="#">¿Quiénes somos?</a></li>
         <li><a href="#">Horario</a></li>
-        <li><a href="#">Ubicación</a></li>
+        <li><a href="ubicacion.php">Ubicación</a></li>
         <li><a href="contacto.php">Contacto</a></li>
       </ul>
     </div>

@@ -2,3 +2,16 @@
 @import url(footer.css);
 
 /* Cuerpo de la página contacto */
+.contacto {
+    margin-top: 20px;
+}
+
+.contacto-titulo {
+    font-weight: bold;
+}
+
+.contacto-btn_enviar_mensaje {
+    width: 400px;
+    padding: 5px;
+    float: right;
+}
