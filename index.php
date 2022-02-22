@@ -43,7 +43,7 @@
       <ul class="nav-enlaces-ul">
         <li><a href="#">Cotiza en línea</a></li>
         <li><a href="#">¿Quiénes somos?</a></li>
-        <li><a href="#">Horario</a></li>
+        <li><a href="horario.php">Horario</a></li>
         <li><a href="ubicacion.php">Ubicación</a></li>
         <li><a href="contacto.php">Contacto</a></li>
       </ul>

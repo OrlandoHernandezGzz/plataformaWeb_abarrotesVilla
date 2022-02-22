@@ -1,0 +1,28 @@
+@import url(header.css);
+@import url(footer.css);
+
+/* Cuerpo de la página contacto */
+
+.horario {
+    margin-top: 20px;
+}
+
+.horario-titulo {
+    font-weight: bold;
+}
+
+.horario-btn_enviar_mensaje {
+    width: 400px;
+    padding: 5px;
+    float: right;
+}
+
+.bg-gris {
+    padding-top: .5rem;
+    background-color: #C4C4C4;
+}
+
+.horario-info {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
