@@ -1,0 +1,25 @@
+/* Footer */
+
+.footer {
+    margin-top: 120px;
+    padding-top: 45px;
+    background: url(../img/footer.svg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 235px;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    color: #fff;
+}
+
+.footer_redes {
+    width: 400px;
+    margin: auto;
+}
+
+.footer_redes a {
+    margin-left: 55px;
+    text-decoration: none;
+}
