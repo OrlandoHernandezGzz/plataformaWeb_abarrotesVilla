@@ -12,7 +12,7 @@
       </div>
       <div class="cabecera-derecha">
         <div class="cabecera-login">
-          <a href="#">
+          <a href="login.php">
               <img src="assets/img/user-alt.png" alt="Inicio de sesión" width="30px" height="30px">
           </a>  
         </div>

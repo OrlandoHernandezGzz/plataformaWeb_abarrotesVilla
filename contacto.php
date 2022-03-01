@@ -16,15 +16,15 @@
    <!-- Cuerpo del formulario de contacto -->
    <section class="contacto"> 
     <div class="container">
-      <h1 class="contacto-titulo">Contacto</h1>
+      <h1 class="contacto-titulo mb-4">Contacto</h1>
       <div class="row row-cols-2">
         <div class="col mb-4">
           <label for="exampleFormControlInput1" class="form-label">Nombre *</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Campo Requerido">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Campo Requerido">
         </div>
         <div class="col mb-4">
           <label for="exampleFormControlInput1" class="form-label">Apellido *</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Campo Requerido">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Campo Requerido">
         </div>
         <div class="col mb-4">
           <label for="exampleFormControlInput1" class="form-label">E-mail *</label>
@@ -32,7 +32,7 @@
         </div>
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">Teléfono *</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Campo Requerido">
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Campo Requerido">
         </div>
       </div>
 

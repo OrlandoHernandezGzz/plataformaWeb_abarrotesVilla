@@ -16,7 +16,7 @@
    <!-- Cuerpo horario -->
    <section class="horario"> 
     <div class="container">
-      <h1 class="horario-titulo">Horario</h1>
+      <h1 class="horario-titulo mb-4">Horario</h1>
 
       <div class="text-center pb-3">
         <img  src="assets/img/horario.png" width="412px" alt="Disponible los 365 días del año">
