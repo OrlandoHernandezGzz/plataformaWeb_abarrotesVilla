@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', event => {
 // Botón menú desplegable del navbar
 function accion() {
     console.log('Esta funcionando mi botón');
-    var anchor = document.getElementsByClassName('nav-enlace');
+    var anchor = document.getElementsByClassName('nav-enlace-movil');
     for (var i = 0; i < anchor.length; i++) {
         // Toggle: coloca o quita la clase 'desaparece'
         anchor[i].classList.toggle('desaparece');

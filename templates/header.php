@@ -1,5 +1,8 @@
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="assets/js/scripts.js"></script>
+
 <!-- Cabecera Principal -->
-<nav class="cabecera">
+<!-- <nav class="cabecera">
   <div class="container">
     <div class="cabecera-logo">
       <a href="index.php" class="cabecera_logo-links">
@@ -23,7 +26,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav> -->
 
   <!-- Cabecera de enlaces -->
   <!-- <nav class="nav-enlaces">
@@ -38,8 +41,42 @@
     </div>
   </nav>     -->
 
-<div class="bg-yellow">
-  <nav class="nav-enlaces container">
+<header class="bg-red">
+  <nav class="aparece inline">
+    <button class="nav-boton" onclick="accion()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <a class="nav-enlace nav-enlace-movil desaparece" href="#">Cotiza en línea</a>
+    <a class="nav-enlace nav-enlace-movil desaparece" href="#">Nosotros</a>
+    <a class="nav-enlace nav-enlace-movil desaparece" href="horario.php">Horario</a>
+    <a class="nav-enlace nav-enlace-movil desaparece" href="ubicacion.php">Ubicación</a>
+    <a class="nav-enlace nav-enlace-movil desaparece" href="contacto.php">Contacto</a>
+  </nav>
+  
+  <div class="container header">
+    <a class="center a right stretch" href="index.php">
+      <img src="assets/img/logo_nav.png" alt="Logo Abarrotes Villa" width="100px">
+      ABARROTES VILLA
+    </a>
+
+    <div class="desaparece left ">
+      <input class="buscador" type="text" name="" id="" placeholder=" Buscar producto...">
+    </div>
+
+    <div class="center left stretch">
+      <a class="left nav-link" href="login.php">
+        <img src="assets/img/user-alt.svg" alt="Inicio de sesión" width="30px">
+      </a>
+      <a class="nav-link" href="#">
+        <img src="assets/img/shopping-cart.svg" alt="Carrito" width="30px">
+      </a>
+    </div>
+  </div>
+
+</header>
+
+<div class="bg-yellow desaparece">
+  <nav class="container">
     <button class="nav-boton" onclick="accion()">
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -50,8 +87,10 @@
     <a class="nav-enlace desaparece" href="contacto.php">Contacto</a>
   </nav>     
 </div>
-  
-<script src="assets/js/scripts.js"></script>
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<div class="bg-yellow aparece">
+  <div class="container centrar">
+      <input class="buscadorAmarillo" type="text" name="" id="" placeholder=" Buscar producto...">
+  </div>
+</div>
+  
