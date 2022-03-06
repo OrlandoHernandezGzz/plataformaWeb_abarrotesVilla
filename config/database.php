@@ -1,18 +1,14 @@
 <?php
-class DataBase {
-    const server = "localhost:3307";
-    const user = "root";
-    const pass = "root";
-    const nameDB = "db_abarrotes_villa";
+    $hostname = "localhost";
+    $database = "abarrotes_villa";
+    $user = "root";
+    $password = "";
 
-    public static function conectar(){
-        try {
-            $conexion = new PDO("mysql:host=".self::server.";dbname=".self::nameDB, self::user ,self::pass);
-            $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $conexion;
-        } catch (PDOexception $err) {
-            return "Falla la conexión" . $err;
-        }
+    $conexion = new mysqli($hostname, $user, $password, $database);
+    
+    //Le estamos diciendo que si conexion tiene error me mande un mensaje, si no siga con el proceso de conexion.
+    if($conexion -> connect_errno){
+        echo "La conexion de la base de datos esta experimentando problemas";
     }
-}
 ?>
+

@@ -16,7 +16,7 @@
    <!-- Cuerpo de ubicación -->
    <section class="ubicacion"> 
     <div class="container">
-        <h1 class="ubicacion-titulo">Ubicación</h1>
+        <h1 class="ubicacion-titulo mb-4">Ubicación</h1>
         <div class="row">
             <div class="col">
                 <div class="ubicacion-mapa">

@@ -1,0 +1,30 @@
+@import url(header.css);
+@import url(footer.css);
+
+/* Cuerpo del login */
+.login {
+    margin-top: 20px;
+}
+
+.login-titulo {
+    font-weight: bold;
+}
+
+.login-ingresar {
+    width: 300px;
+    padding: 5px;
+}
+
+.bg-gris {
+    padding-top: .5rem;
+    background-color: #C4C4C4;
+}
+
+.registro a {
+    text-decoration: none;
+    color: black;
+}
+
+.registro a:hover {
+	color: #E70808;
+}
