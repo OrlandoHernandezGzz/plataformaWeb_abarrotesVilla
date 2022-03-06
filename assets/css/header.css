@@ -10,8 +10,13 @@ body {
     background: url(../img/fondo.png)
 }
 
+a:hover {}
+
+
 /* Encabezado principal */
-.cabecera {
+
+
+/* .cabecera {
     background-color: #E70808;
     width: 100%;
     height: 100px;
@@ -24,13 +29,13 @@ body {
 .cabecera-logo {
     width: 250px;
     float: left;
-    color: #fff;
+    color: #FFF;
 }
 
-.cabecera-logo p{
+.cabecera-logo p {
     float: right;
     margin-top: 40px;
-    color: #fff;
+    color: #FFF;
 }
 
 .cabecera-buscador {
@@ -54,7 +59,7 @@ body {
     top: 5px;
 }
 
- .cabecera-login {
+.cabecera-login {
     float: left;
     width: 30px;
 }
@@ -62,9 +67,13 @@ body {
 .cabecera-carrito {
     float: right;
     width: 30px;
-}
+} */
+
 
 /* Encabezado secundario */
+
+
+/* 
 .nav-enlaces {
     background-color: #FBC60A;
     height: 40px;
@@ -86,18 +95,165 @@ body {
 }
 
 .nav-enlaces-ul li a {
-    display:block;
-	width: 200px;
-	padding:5px;
-	text-decoration:none;
+    display: block;
+    width: 200px;
+    padding: 5px;
+    text-decoration: none;
     margin: auto;
-	text-align:center;
-	color:#000000;
-	background-color: #FBC60A;
+    text-align: center;
+    color: #000000;
+    background-color: #FBC60A;
+    font-weight: bold;
+}
+*/
+
+
+/* .nav-enlaces-ul li a:hover {
+    color:#99CC00;
+    background-color: #ebcf6a;
+} */
+
+
+/* By Miguel Ruiz */
+
+.bg-yellow {
+    background-color: #FBC60A;
+}
+
+.bg-red {
+    background-color: #E70808;
+    display: flex;
+}
+
+.nav-enlace {
+    display: inline-block;
+    background-color: transparent;
+    padding: 10px 30px;
+    text-decoration: none;
+    /* text-align: center; */
+    color: #000;
     font-weight: bold;
 }
 
-.nav-enlaces-ul li a:hover {
-    /* color:#99CC00; */
-	background-color: #ebcf6a;
+.nav-enlace:hover {
+    background-color: #ebcf6a;
+    color: #000;
+}
+
+.nav-enlace-movil {
+    color: #fff;
+}
+
+.nav-enlace-movil:hover {
+    background-color: #b90808;
+    color: #FFF;
+}
+
+nav {
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 48px;
+}
+
+.nav-boton {
+    background-color: transparent;
+    color: #fff;
+    margin-left: 10px;
+    border: none;
+    display: none;
+}
+
+.aparece {
+    display: none;
+}
+
+.buscadorAmarillo {
+    width: 100%;
+    height: 48px;
+    border: 2px solid #000;
+}
+
+.centrar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.buscador {
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 5px;
+}
+
+.center {
+    align-content: center;
+    align-items: center;
+}
+
+.stretch {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.a:hover {
+    color: #FFF;
+}
+
+.left {
+    margin-left: auto;
+}
+
+.right {
+    margin-right: auto;
+}
+
+@media (max-width: 992px) {
+    .buscador {
+        width: 270px;
+    }
+}
+
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .nav-enlace {
+        margin: 5px 0;
+        width: auto;
+    }
+    .nav-boton {
+        display: inline-block;
+    }
+    .desaparece {
+        display: none;
+    }
+    .aparece {
+        display: block;
+    }
+    .inline {
+        display: inline-flex !important;
+        align-items: flex-start;
+    }
 }

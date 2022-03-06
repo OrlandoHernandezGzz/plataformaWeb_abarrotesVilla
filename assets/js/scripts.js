@@ -1,9 +1,9 @@
 /*!
-    * Start Bootstrap - SB Admin v7.0.4 (https://startbootstrap.com/template/sb-admin)
-    * Copyright 2013-2021 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-    */
-    // 
+ * Start Bootstrap - SB Admin v7.0.4 (https://startbootstrap.com/template/sb-admin)
+ * Copyright 2013-2021 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
+ */
+// 
 // Scripts
 // 
 
@@ -24,3 +24,13 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+// Botón menú desplegable del navbar
+function accion() {
+    console.log('Esta funcionando mi botón');
+    var anchor = document.getElementsByClassName('nav-enlace-movil');
+    for (var i = 0; i < anchor.length; i++) {
+        // Toggle: coloca o quita la clase 'desaparece'
+        anchor[i].classList.toggle('desaparece');
+    }
+}
