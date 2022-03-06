@@ -1,0 +1,36 @@
+@import url(header.css);
+@import url(footer.css);
+
+/* Estilos de ubicacion */
+.ubicacion {
+    margin-top: 20px;
+}
+
+.ubicacion-titulo {
+    font-weight: bold;
+}
+
+.ubicacion-mapa {
+    overflow:hidden;
+    padding-bottom:30%;
+    position:relative;
+    height: 0;
+}
+.ubicacion-mapa iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.ubicacion-img {
+    float: left;
+    margin-right: 10px;
+}
+
+.ubicacion-info {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}

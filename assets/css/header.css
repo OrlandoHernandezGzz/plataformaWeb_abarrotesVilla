@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: url(../img/fondo.png)
+}
+
+
+/* Encabezado principal */
+
+.cabecera {
+    background-color: #E70808;
+    width: 100%;
+    height: 100px;
+}
+
+.cabecera .container {
+    height: 100px;
+}
+
+.cabecera-logo {
+    width: 250px;
+    float: left;
+    color: #fff;
+}
+
+.cabecera-logo p {
+    float: right;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.cabecera-buscador {
+    width: 400px;
+    margin: auto;
+    position: relative;
+    top: 35px;
+    left: 50px;
+}
+
+.cabecera-buscador input {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.cabecera-derecha {
+    float: right;
+    width: 100px;
+    position: relative;
+    top: 5px;
+}
+
+.cabecera-login {
+    float: left;
+    width: 30px;
+}
+
+.cabecera-carrito {
+    float: right;
+    width: 30px;
+}
+
+
+/* Encabezado secundario */
+
+
+/* 
+.nav-enlaces {
+    background-color: #FBC60A;
+    height: 40px;
+}
+
+.nav-enlaces .container {
+    margin: auto;
+}
+
+.nav-enlaces-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-enlaces-ul li {
+    margin: 3px 10px;
+    float: left;
+}
+
+.nav-enlaces-ul li a {
+    display: block;
+    width: 200px;
+    padding: 5px;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+    color: #000000;
+    background-color: #FBC60A;
+    font-weight: bold;
+}
+*/
+
+
+/* .nav-enlaces-ul li a:hover {
+    color:#99CC00;
+    background-color: #ebcf6a;
+} */
+
+
+/* By Miguel Ruiz */
+
+.bg-yellow {
+    background-color: #FBC60A;
+}
+
+.nav-enlace {
+    display: inline-block;
+    background-color: #FBC60A;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-align: center;
+    width: 175px;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-enlace:hover {
+    background-color: #ebcf6a;
+    color: #000;
+}
+
+nav {
+    background-color: #FBC60A;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-boton {
+    background-color: #FBC60A;
+    color: #fff;
+    padding: 10px 0;
+    border: 2px solid #fff;
+    display: none;
+}
+
+@media (max-width: 746px) {
+    nav {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .nav-enlace {
+        margin: 5px 0;
+        width: auto;
+    }
+    .nav-boton {
+        display: inline-block;
+    }
+    .desaparece {
+        display: none;
+    }
+}
