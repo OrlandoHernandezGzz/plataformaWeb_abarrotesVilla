@@ -10,19 +10,14 @@
     }
     $nombreUser = $_SESSION['nombre'];
 
-    // Consulta para establecer las categorias en la vista categoriasProductos
-    $queryCat = "SELECT * FROM cat_producto";
+    // Consulta para establecer los productos en la vista productos
+    $queryProductos = "SELECT * FROM producto";
 
-    $categorias = $conexion->query($queryCat);
-    $cantCategorias = $categorias->num_rows;
+    $productos = $conexion->query($queryProductos);
+    $cantProductos = $productos->num_rows;
 
-    if($cantCategorias > 0){
-      $rowCat = $categorias->fetch_assoc();
-
-      $idCategoria = $rowCat['id_cat_prod'];
-      $nombreCategoria = $rowCat['nombre'];
-      $descripCategoria = $rowCat['descripcion'];
-      $imgCategoria = $rowCat['img'];
+    if($cantProductos > 0){
+      $rowProd = $productos->fetch_assoc();
     }
 
     // Logica para eliminar una categoria de producto.
@@ -50,7 +45,7 @@
             echo "<script>alert('Error al Eliminar Registro.')</script>";
         }
 
-        header("location:categoriasProductos.php");
+        header("location:productos.php");
     }
 ?>
 
@@ -60,33 +55,41 @@
 <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Categorías de Productos</h1>
+                <h1 class="mt-4">Productos</h1>
                 <ol class="breadcrumb mb-4">
-                    <a href="agregarCategorias.php" class="btn btn-success" role="button">Nuevo</a>
+                    <a href="agregarProductos.php" class="btn btn-success" role="button">Nuevo</a>
                 </ol>
                 <!-- Tabla para visualizar los datos -->
                 <table class="table">
                     <thead class="container-fluid px-4">
-                        <tr class="d-flex">
-                            <th class="col-1">ID</th>
-                            <th class="col-2">Nombre</th>
-                            <th class="col-4">Descripción</th>
-                            <th class="col-2">Imagen</th>
-                            <th class="col-2">Acciones</th>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Disponibles</th>
+                            <th>Imagen</th>
+                            <th>Categoria</th>
+                            <th>Proveedor</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($categorias as $categoria){ ?>
-                        <tr class="d-flex">
-                            <td scope="row" class="col-1"><?php echo $categoria['id_cat_prod'] ?></td>
-                            <td class="col-2"><?php echo $categoria['nombre'];  ?></td>
-                            <td class="col-4"><?php echo $categoria['descripcion'] ?></td>
-                            <td class="col-2">
-                                <img src="public/imgs/<?php echo $categoria['img']; ?>" width="100" alt="img categorias">
+                        <?php foreach($productos as $producto){ ?>
+                        <tr>
+                            <td scope="row"><?php echo $producto['id_producto']; ?></td>
+                            <td><?php echo $producto['nombre'];  ?></td>
+                            <td><?php echo $producto['descripcion']; ?></td>
+                            <td><?php echo $producto['precio']; ?></td>
+                            <td><?php echo $producto['in_stoke']; ?></td>
+                            <td>
+                                <img src="public/imgs/<?php echo $producto['img']; ?>" width="100" alt="img categorias">
                             </td>
-                            <td class="col-2">
-                                <a href="?borrar=<?php echo $categoria['id_cat_prod']; ?>" class="btn btn-danger" role="button">Eliminar</a> |
-                                <a href="editarCategorias.php?id=<?php echo $categoria['id_cat_prod']; ?>" class="btn btn-warning" role="button">Editar</a>
+                            <td><?php echo $producto['id_cat_prod']; ?></td>
+                            <td><?php echo $producto['id_proveedor']; ?></td>
+                            <td>
+                                <a href="?borrar=<?php echo $producto['id_producto']; ?>" class="btn btn-danger" role="button">Eliminar</a> |
+                                <a href=".php?id=<?php echo $producto['id_producto']; ?>" class="btn btn-warning" role="button">Editar</a>
                             </td>
                         </tr>
                         <?php } ?>

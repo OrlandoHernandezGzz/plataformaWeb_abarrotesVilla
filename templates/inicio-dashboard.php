@@ -46,6 +46,10 @@
                                 <div class="sb-nav-link-icon"><i class=""></i></div>
                                 Categorías de Productos
                             </a>
+                            <a class="nav-link" href="productos.php">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Productos
+                            </a>
                         </div>
                     </div>
                 </nav>
