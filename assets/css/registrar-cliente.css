@@ -1,0 +1,9 @@
+@import url(header.css);
+@import url(footer.css);
+
+/* Cuerpo del registro de cliente */
+.registroCliente-btnRegistrar {
+    width: 200px;
+    padding: 5px;
+    float: right;
+}

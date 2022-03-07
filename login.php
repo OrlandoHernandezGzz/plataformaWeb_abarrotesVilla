@@ -102,7 +102,7 @@
 
             <!-- Registro para el cliente -->
             <div class="registro bg-gris text-center mt-4">
-                <a href="#">
+                <a href="registrarCliente.php">
                     <h2 class="registro-link">¿No tienes cuenta? Registrate aquí.</h2>
                 </a>
             </div>
