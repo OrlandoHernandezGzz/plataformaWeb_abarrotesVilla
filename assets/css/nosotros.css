@@ -1,0 +1,49 @@
+@import url(header.css);
+@import url(footer.css);
+
+/* Cuerpo de la página nosotros */
+
+h1 {
+    position: relative;
+}
+
+h1.nosotros-titulo::after {
+    content: "";
+    background-color: #FBC60A;
+    position: absolute;
+    left: 0;
+    top: 95%;
+    width: calc(5rem + .5em);
+    height: 4px;
+    border-radius: 50px;
+}
+
+h2.nosotros-titulo {
+    /* margin-bottom: -5px; */
+    /* margin-bottom: 0; */
+    padding-bottom: 5px;
+}
+
+.nosotros {
+    margin-top: 20px;
+}
+
+.nosotros-titulo {
+    font-weight: bold;
+}
+
+.nosotros-btn_enviar_mensaje {
+    width: 400px;
+    padding: 5px;
+    float: right;
+}
+
+.bg-gris {
+    padding-top: .5rem;
+    background-color: #C4C4C4;
+}
+
+.nosotros-info {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
