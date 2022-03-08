@@ -4,7 +4,7 @@
 
     // Validando que el post no venga vacio
     if($_POST){
-        print_r($_POST);
+        // print_r($_POST);
         // obteniendo todos nuestros campos.
         $nombre = $_POST['registroCliente-txtNombre'];
         $apellidos = $_POST['registroCliente-txtApellidos'];
