@@ -50,6 +50,10 @@
                                 <div class="sb-nav-link-icon"><i class=""></i></div>
                                 Productos
                             </a>
+                            <a class="nav-link" href="proveedores.php">
+                                <div class="sb-nav-link-icon"><i class=""></i></div>
+                                Proveedores
+                            </a>
                         </div>
                     </div>
                 </nav>
