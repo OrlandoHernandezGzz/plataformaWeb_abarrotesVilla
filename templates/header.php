@@ -47,7 +47,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <a class="nav-enlace nav-enlace-movil desaparece" href="cotizarEnLinea.php">Cotiza en línea</a>
-    <a class="nav-enlace nav-enlace-movil desaparece" href="#">Nosotros</a>
+    <a class="nav-enlace nav-enlace-movil desaparece" href="nosotros.php">Nosotros</a>
     <a class="nav-enlace nav-enlace-movil desaparece" href="horario.php">Horario</a>
     <a class="nav-enlace nav-enlace-movil desaparece" href="ubicacion.php">Ubicación</a>
     <a class="nav-enlace nav-enlace-movil desaparece" href="contacto.php">Contacto</a>
@@ -81,7 +81,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <a class="nav-enlace desaparece" href="cotizarEnLinea.php">Cotiza en línea</a>
-    <a class="nav-enlace desaparece" href="#">Nosotros</a>
+    <a class="nav-enlace desaparece" href="nosotros.php">Nosotros</a>
     <a class="nav-enlace desaparece" href="horario.php">Horario</a>
     <a class="nav-enlace desaparece" href="ubicacion.php">Ubicación</a>
     <a class="nav-enlace desaparece" href="contacto.php">Contacto</a>
