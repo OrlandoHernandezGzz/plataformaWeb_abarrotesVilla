@@ -5,18 +5,21 @@
     // Mantiene la sesión del usuario.
     session_start();
     
+    // Validación para agregar seguridad a la vista de admin.
     if(!isset($_SESSION['id_empleado'])){
         header("Location: index.php");
     }
+    // Si el usuario accede se guardara su nombre.
     $nombreUser = $_SESSION['nombre'];
 
     // Logica para agregar una categoria de producto.
     if($_POST){
-        // print_r($_POST);
+        // Guardamos la respuestas por metodo post.
         $nombreCategoria = $_POST['txtNombreCat'];
         $descripCategoria = $_POST['txtDescripcionCat'];
         $imgCategoria = $_FILES['txtImgCat']['name'];
 
+        // Guardado de las imagenes dentro de la carpeta public.
         $fecha = new DateTime();
         $imagen = $fecha->getTimeStamp() . "_" . $_FILES['txtImgCat']['name'];
         $imgTemporal = $_FILES["txtImgCat"]["tmp_name"];
@@ -31,6 +34,7 @@
             echo "<script>alert('Error al registrar.')</script>";
         }
 
+        // Nos retorna a la vista cateogrias productos.
         header("Location: categoriasProductos.php");
     }
 ?>
@@ -38,6 +42,7 @@
 <!-- Inicio de dashboard -->
 <?php require_once "templates/inicio-dashboard.php" ?>
 
+<!-- Cuerpo del formulario -->
 <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
@@ -46,6 +51,7 @@
                     <li class="breadcrumb-item active">Registra las categorías</li>
                 </ol>
             </div>
+
             <!-- Formulario de los datos del proyecto -->
             <div class="card">
                 <div class="card-body">

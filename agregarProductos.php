@@ -44,6 +44,7 @@
 <!-- Inicio de dashboard -->
 <?php require_once "templates/inicio-dashboard.php" ?>
 
+<!-- Cuerpo del formulario -->
 <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
@@ -52,6 +53,7 @@
                     <li class="breadcrumb-item active">Registra los Productos</li>
                 </ol>
             </div>
+
             <!-- Formulario de los datos del proyecto -->
             <div class="card">
                 <div class="card-body">
@@ -78,6 +80,7 @@
                         <label for="catProducto">Categoría del producto: </label>
                         <select class="form-select mb-4" name="txtCatProd">
                             <option selected>Seleccione la categoría</option>
+                            <!-- Cargamos las opciones de las categorias de los productos -->
                             <?php 
                                 $queryIdCat = "SELECT id_cat_prod, nombre FROM cat_producto";
                                 $resultIdCat = $conexion->query($queryIdCat);
@@ -89,6 +92,7 @@
                         <label for="imgCategoria">Proveedor del Producto: </label>
                         <select class="form-select mb-4" name="txtProveProd">
                         <option selected>Seleccione el Proveedor</option>
+                            <!-- Cargamos las opciones de los proveedores de los productos -->
                             <?php 
                                 $queryIdProveedor = "SELECT id_proveedor, nombre FROM proveedor";
                                 $resultIdProveedor = $conexion->query($queryIdProveedor);

@@ -5,6 +5,7 @@
     // Mantiene la sesión del usuario.
     session_start();
     
+    // Validación para agregar seguridad a la vista de admin.
     if(!isset($_SESSION['id_empleado'])){
         header("Location: index.php");
     }

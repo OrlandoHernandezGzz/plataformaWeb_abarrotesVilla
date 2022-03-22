@@ -5,9 +5,11 @@
     // Mantiene la sesión del usuario.
     session_start();
     
+    // Validacion para proteger la ruta administración
     if(!isset($_SESSION['id_empleado'])){
         header("Location: index.php");
     }
+    // Autenticación del empleado
     $nombreUser = $_SESSION['nombre'];
 
     // Logica para editar proveedor.
@@ -15,8 +17,11 @@
         // Trae los datos a los inputs
         $id = $_GET['id'];
 
+        // Consulta a nuestra base de datos
         $query = "SELECT * FROM proveedor WHERE id_proveedor=$id";
+        // Almacena los resultados
         $resultado = $conexion->query($query);
+        // Areglo asociativo
         $row = $resultado->fetch_assoc();
     }
 ?>
@@ -24,6 +29,7 @@
 <!-- Inicio de dashboard -->
 <?php require_once "templates/inicio-dashboard.php" ?>
 
+<!-- Cuerpo para editar un proveedor -->
 <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
