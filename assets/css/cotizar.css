@@ -1,0 +1,15 @@
+@import url(header.css);
+@import url(footer.css);
+
+.horario-titulo {
+    font-weight: bold;
+}
+
+.card {
+    width: 250px;
+}
+
+.btnComprar {
+    width: 100%;
+}
+

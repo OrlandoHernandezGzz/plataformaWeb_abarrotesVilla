@@ -1,12 +1,14 @@
 <?php
+    // Credenciales de la base de datos
     $hostname = "localhost";
     $database = "abarrotes_villa";
     $user = "root";
     $password = "";
 
+    // Objeto que nos establecera la conexión.
     $conexion = new mysqli($hostname, $user, $password, $database);
     
-    //Le estamos diciendo que si conexion tiene error me mande un mensaje, si no siga con el proceso de conexion.
+    // Validación para establecer si la conexión fue exitosa.
     if($conexion -> connect_errno){
         echo "La conexion de la base de datos esta experimentando problemas";
     }

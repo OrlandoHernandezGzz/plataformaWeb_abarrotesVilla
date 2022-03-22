@@ -1,3 +1,29 @@
+<?php
+    // Conexión de la base de datos.
+    require_once "config/database.php";
+
+    // Consulta para establecer las categorias en la vista index
+    $queryCat = "SELECT * FROM cat_producto";
+
+    // Consulta las categorias
+    $cateogorias = $conexion->query($queryCat);
+
+    // Para saber el numero de filas
+    $cantCategorias = $cateogorias->num_rows;
+
+    // Si la cantidad es mayor que cero ejecuta el codigo
+    if($cantCategorias > 0){
+      // generamos el array asociativo de categorias
+      $rowCat = $cateogorias->fetch_assoc();
+
+      // Tomamos los valores del array asociativo
+      $nombreCategoria = $rowCat['nombre'];
+      $descripCategoria = $rowCat['descripcion'];
+      $imgCategoria = $rowCat['img'];
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,42 +71,18 @@
     <div class="container">
       <h2>Categorias</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+        <?php foreach($cateogorias as $categoria){?>
+          
+          <div class="col">
+              <div class="card h-100">
+              <img src="public/imgs/<?php echo $categoria['img']; ?>" width="355" height="200" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title"><?php echo $categoria['nombre'] ?></h5>
+                  <p class="card-text"><?php echo $categoria['descripcion'] ?></p>
+              </div>
+              </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>    
+        <?php }?>
       </div>    
     </div>
   </section>
