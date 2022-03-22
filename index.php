@@ -5,13 +5,18 @@
     // Consulta para establecer las categorias en la vista index
     $queryCat = "SELECT * FROM cat_producto";
 
+    // Consulta las categorias
     $cateogorias = $conexion->query($queryCat);
+
+    // Para saber el numero de filas
     $cantCategorias = $cateogorias->num_rows;
 
+    // Si la cantidad es mayor que cero ejecuta el codigo
     if($cantCategorias > 0){
+      // generamos el array asociativo de categorias
       $rowCat = $cateogorias->fetch_assoc();
 
-      //
+      // Tomamos los valores del array asociativo
       $nombreCategoria = $rowCat['nombre'];
       $descripCategoria = $rowCat['descripcion'];
       $imgCategoria = $rowCat['img'];

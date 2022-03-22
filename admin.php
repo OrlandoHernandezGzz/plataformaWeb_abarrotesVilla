@@ -2,14 +2,18 @@
     // Mantiene la sesión del usuario.
     session_start();
     
+    // Validación para agregar seguridad a la vista de admin.
+    // Si no se inicia sesión el empleado no puede acceder a la vista admin
     if(!isset($_SESSION['id_empleado'])){
         header("Location: index.php");
     }
+    // Si el usuario accede se guardara su nombre.
     $nombreUser = $_SESSION['nombre'];
 ?>
-    <!-- inicio de dashboard -->
+    <!-- Inicio de dashboard -->
     <?php require_once "templates/inicio-dashboard.php"; ?>
 
+    <!-- Cuerpo del dashboard -->
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
@@ -566,5 +570,5 @@
             </div>
         </main>
 
-    <!-- cierre de dashboard -->
+    <!-- Cierre de dashboard -->
     <?php require_once "templates/cierre-dashboard.php"; ?>

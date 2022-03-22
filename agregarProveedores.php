@@ -5,6 +5,7 @@
     // Mantiene la sesión del usuario.
     session_start();
     
+    // 
     if(!isset($_SESSION['id_empleado'])){
         header("Location: index.php");
     }
@@ -12,7 +13,6 @@
 
     // Logica para agregar una categoria de producto.
     if($_POST){
-        // print_r($_POST);
         $idProveedor = $_POST['id_proveedor'];
         $nombreProveedor = $_POST['txtNombreProve'];
         $descripProveedor = $_POST['txtDescripcionProve'];

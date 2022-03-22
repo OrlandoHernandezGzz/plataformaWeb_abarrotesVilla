@@ -5,6 +5,7 @@
     // Consulta a los productos para armar catalogo.
     $queryCatalogosProd = "SELECT * FROM producto";
 
+    // Ejecutamos el query y se guarda en catalogos
     $catalogos = $conexion->query($queryCatalogosProd);
 
 
@@ -32,10 +33,12 @@
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php foreach($catalogos as $catalogo){?>
           <div class="col">
-              <div class="card h-100">
-                <img src="public/imgs/<?php echo $catalogo['img']; ?>" width="250" height="250" alt="producto">
+              <div class="card h-100 mx-auto d-block">
+                <img src="public/imgs/<?php echo $catalogo['img']; ?>" class="mx-auto d-block" width="200" height="250" alt="producto">
                 <div class="card-body">
-                    <h5 class="card-title text-center"><?php echo $catalogo['nombre'] ?></h5>
+                    <h5 class="card-title text-center mb-4"><?php echo $catalogo['nombre'] ?></h5>
+                    <p>Precio: <?php echo $catalogo['precio'] ?></p>
+                    <p>Existencia: <?php echo $catalogo['in_stoke'] ?></p>
                     <a href="#" class="btn btn-dark btnComprar">Comprar</a>
                 </div>
               </div>
