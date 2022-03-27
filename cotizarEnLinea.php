@@ -37,7 +37,7 @@
                 <img src="public/imgs/<?php echo $catalogo['img']; ?>" class="mx-auto d-block" width="200" height="250" alt="producto">
                 <div class="card-body">
                     <h5 class="card-title text-center mb-4"><?php echo $catalogo['nombre'] ?></h5>
-                    <p>Precio: <?php echo $catalogo['precio'] ?></p>
+                    <p>Precio: $<?php echo $catalogo['precio'] ?></p>
                     <p>Existencia: <?php echo $catalogo['in_stoke'] ?></p>
                     <a href="#" class="btn btn-dark btnComprar">Comprar</a>
                 </div>
