@@ -1,3 +1,4 @@
+<?php require_once 'config/config.php'; ?>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script src="assets/js/scripts.js"></script>
 
@@ -28,8 +29,9 @@
       <a class="left nav-link" href="login.php">
         <img src="assets/img/user-alt.svg" alt="Inicio de sesión" width="30px">
       </a>
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="verificaCarrito.php">
         <img src="assets/img/shopping-cart.svg" alt="Carrito" width="30px">
+        <span id="num_cart" class="badge bg-secondary"><?php echo $num_cart; ?></span>
       </a>
     </div>
   </div>

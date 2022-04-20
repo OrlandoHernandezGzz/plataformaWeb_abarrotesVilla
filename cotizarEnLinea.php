@@ -1,14 +1,13 @@
 <?php
     // Importamos la conexion a la DB.
     require "config/database.php";
+    require "config/config.php";
 
     // Consulta a los productos para armar catalogo.
     $queryCatalogosProd = "SELECT * FROM producto";
 
     // Ejecutamos el query y se guarda en catalogos
     $catalogos = $conexion->query($queryCatalogosProd);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +38,8 @@
                     <h5 class="card-title text-center mb-4"><?php echo $catalogo['nombre'] ?></h5>
                     <p>Precio: $<?php echo $catalogo['precio'] ?></p>
                     <p>Existencia: <?php echo $catalogo['in_stoke'] ?></p>
-                    <a href="#" class="btn btn-dark btnComprar">Comprar</a>
+                    <button class="btn btn-outline-dark mb-2 botonesCotizar" type="button" onclick="addProducto(<?php echo $catalogo['id_producto']; ?>, '<?php echo hash_hmac('sha1', $catalogo['id_producto'], KEY_TOKEN); ?>')">Agregar al carrito</button>                    
+                    <a href="detalles.php?id=<?php echo $catalogo['id_producto']; ?>&token=<?php echo hash_hmac('sha1', $catalogo['id_producto'], KEY_TOKEN); ?>" class="btn btn-outline-primary botonesCotizar">Detalles</a>
                 </div>
               </div>
           </div>
@@ -50,6 +50,29 @@
   
   <!-- Pie de la página -->
   <?php require_once "templates/footer.php" ?>
+  
+  <script>
+    function addProducto(id, token){
+        // Url donde mandaremos el evento.
+        let url = 'carrito.php';
+        // Manda los parametros por metodo post.
+        let formData = new FormData();
+        formData.append('id', id);
+        formData.append('token', token);
+        // Enviamos la url.
+        fetch(url, {
+          method: 'POST',
+          body: formData,
+          mode: 'cors'
+        }).then(response => response.json())
+        .then(data => {
+          if(data.ok){
+            let elemento = document.getElementById('num_cart');
+            elemento.innerHTML = data.numero;
+          }
+        })
 
+    }
+  </script>
 </body>
 </html>
