@@ -4,7 +4,9 @@
     define("MONEDA", "$");
 
     // Sesión del url cotizar en línea.
-    session_start();
+    if(!isset($_SESSION)) { 
+        session_start(); 
+      }
 
     // Para hacer que el carrito no se borre la información.
     $num_cart = 0;

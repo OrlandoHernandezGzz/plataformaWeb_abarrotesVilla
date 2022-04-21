@@ -12,10 +12,15 @@
 
         // Consulta empleados.
         $query = "SELECT * FROM empleado WHERE email = '$usuario'";
+        $query2 = "SELECT * FROM cliente WHERE email = '$usuario'";
+
 
         // Almacena resultado del query.
         $resultado = $conexion->query($query);
         $cantEmpleados = $resultado->num_rows;
+
+        $resultado2 = $conexion->query($query2);
+        $cantClientes = $resultado2->num_rows;
 
         // Validación si hay registros en la tabla.
         if($cantEmpleados > 0){
@@ -35,17 +40,29 @@
 
                 // Redirigir a la vista admin.php.
                 header('Location: admin.php');
-            } else if(false){
-                // Iniciamos sesiones del cliente.
-                // $_SESSION['id_cliente'];
-                // $_SESSION['nombre'];
-
-                // Redirigir a la vista 
-                // header('Location: admin.php');
             } else {
                 echo "<script>alert('Usuario o Contraseñas incorrectas.')</script>";
             }
 
+        } else if($cantClientes > 0) {
+            // Matriz asociativa de los registros.
+            $row = $resultado2->fetch_assoc();
+
+            // Entra a la clave del arreglo y toma el valor de pass del registro.
+            $client_db = $row['email'];
+            $pass_db = $row['password'];
+
+            // Validacion para las credenciales del usuario y contraseña.
+            if($usuario == $client_db && $pass == $pass_db){
+                // Iniciamos sesiones del cliente.
+                $_SESSION['id_cliente'];
+                $_SESSION['nombre'];
+
+                // Redirigir a la vista 
+                header('Location: cotizarEnLinea.php');
+            } else {
+                echo "<script>alert('Usuario o Contraseñas incorrectas.')</script>";
+            }
         } else {
             echo "<script>alert('No existe el usuario digitado, favor de registrarse.')</script>";
         }

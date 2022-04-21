@@ -75,7 +75,7 @@
                                 <?php echo MONEDA . number_format($subtotal, 2, '.', ','); ?>
                             </div>
                         </td>
-                        <td><a href="#" id="eliminar" class="btn btn-danger btn-sm" data-bs-id="<?php echo $id; ?>" data-ds-toogle="modal" data-bs-toogle="eliminaModal">Eliminar</a></td>
+                        <td><a href="#" id="eliminar" class="btn btn-danger btn-sm" data-bs-id="<?php echo $id; ?>" data-bs-toggle="modal" data-bs-target="#eliminaModal">Eliminar</a></td>
                     </tr>
                     <?php } ?>
                 </tbody>
@@ -99,14 +99,40 @@
             </div>
         </div>
     </div>
-
-    
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="eliminaModal" tabindex="-1" aria-labelledby="eliminaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="eliminaModalLabel">Confirmar Eliminado</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            ¿Desea eliminar el producto del carrito?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger" id="btn-elimina" onclick="eliminar()">Eliminar</button>
+        </div>
+        </div>
+    </div>
+    </div>
   
   <!-- Pie de la página -->
   <?php require_once "templates/footer.php" ?>
   
   <script>
+    let eliminaModal = document.getElementById('eliminaModal');
+    eliminaModal.addEventListener('show.bs.modal', function(event){
+        let button = event.relatedTarget;
+        // obtiene el id que se le pasa al boton
+        let id = button.getAttribute('data-bs-id');
+        let buttonElimina = eliminaModal.querySelector('.modal-footer #btn-elimina');
+        buttonElimina.value = id;
+    })
+    
     function actualizarCantidad(cantidad, id){
         // Url donde mandaremos el evento.
         let url = 'actualizarCarrito.php';
@@ -136,11 +162,35 @@
             total = new Intl.NumberFormat('en-US', {
                 minimiumFractionDigits: 2
             }).format(total);
-            document.getElementById('total').innerHTML = '<?php echo MONEDA; ?>' + total;
+            document.getElementById('total').innerHTML = 'Total: <?php echo MONEDA; ?>' + total;
           }
         })
-
     }
+
+    function eliminar(){
+        let btnElimina = document.getElementById('btn-elimina')
+        let id = btnElimina.value;
+
+        // Url donde mandaremos el evento.
+        let url = 'actualizarCarrito.php';
+        // Manda los parametros por metodo post.
+        let formData = new FormData();
+        formData.append('id', id);
+        formData.append('action', 'eliminar')
+        // Enviamos la url.
+        fetch(url, {
+            method: 'POST',
+            body: formData,
+            mode: 'cors'
+        }).then(response => response.json())
+        .then(data => {
+            if(data.ok){
+            location.reload();
+            }
+        })
+    }
+
+
   </script>
 </body>
 </html>
