@@ -1,0 +1,6 @@
+@import url(header.css);
+@import url(footer.css);
+
+.card {
+    padding: 50px;
+}
