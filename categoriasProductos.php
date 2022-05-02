@@ -61,31 +61,32 @@
 <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Categorías de Productos</h1>
+                <h1 class="mt-4 mb-4">Categorías de Productos</h1>
                 <ol class="breadcrumb mb-4">
                     <a href="agregarCategorias.php" class="btn btn-success" role="button">Nuevo</a>
+                    <a href="reporteCatProd.php" class="btn btn-primary ms-2" role="button">Generar Reporte</a>
                 </ol>
                 <!-- Tabla para visualizar los datos -->
                 <table class="table">
                     <thead class="container-fluid px-4">
                         <tr class="d-flex">
-                            <th class="col-1">ID</th>
+                            <th>ID</th>
                             <th class="col-2">Nombre</th>
                             <th class="col-4">Descripción</th>
                             <th class="col-2">Imagen</th>
-                            <th class="col-2">Acciones</th>
+                            <th class="col-3">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($categorias as $categoria){ ?>
                         <tr class="d-flex">
-                            <td scope="row" class="col-1"><?php echo $categoria['id_cat_prod'] ?></td>
+                            <td scope="row"><?php echo $categoria['id_cat_prod'] ?></td>
                             <td class="col-2"><?php echo $categoria['nombre'];  ?></td>
                             <td class="col-4"><?php echo $categoria['descripcion'] ?></td>
                             <td class="col-2">
                                 <img src="public/imgs/<?php echo $categoria['img']; ?>" width="100" alt="img categorias">
                             </td>
-                            <td class="col-2">
+                            <td class="col-3">
                                 <a href="?borrar=<?php echo $categoria['id_cat_prod']; ?>" class="btn btn-danger" role="button">Eliminar</a> |
                                 <a href="editarCategorias.php?id=<?php echo $categoria['id_cat_prod']; ?>" class="btn btn-warning" role="button">Editar</a>
                             </td>
