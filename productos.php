@@ -11,7 +11,7 @@
     $nombreUser = $_SESSION['nombre'];
 
     // Consulta para establecer los productos en la vista productos
-    $queryProductos = "SELECT * FROM producto";
+    $queryProductos = "SELECT p.id_producto, p.nombre, p.descripcion, p.precio, p.in_stoke, p.descuento, p.img, cp.nombre as cat_nombre, pr.nombre as prove_nombre FROM producto AS p INNER JOIN cat_producto AS cp ON p.id_cat_prod = cp.id_cat_prod INNER JOIN proveedor as pr ON p.id_proveedor = pr.id_proveedor";;
 
     $productos = $conexion->query($queryProductos);
     $cantProductos = $productos->num_rows;
@@ -58,6 +58,7 @@
                 <h1 class="mt-4">Productos</h1>
                 <ol class="breadcrumb mb-4">
                     <a href="agregarProductos.php" class="btn btn-success" role="button">Nuevo</a>
+                    <a href="reporteProductos.php" class="btn btn-primary ms-2" role="button">Generar Reporte</a>
                 </ol>
                 <!-- Tabla para visualizar los datos -->
                 <table class="table">
@@ -68,10 +69,11 @@
                             <th>Descripción</th>
                             <th>Precio</th>
                             <th>Disponibles</th>
+                            <th>Descuento</th>
                             <th>Imagen</th>
                             <th>Categoria</th>
                             <th>Proveedor</th>
-                            <th>Acciones</th>
+                            <th class="col-2">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,12 +84,13 @@
                             <td><?php echo $producto['descripcion']; ?></td>
                             <td><?php echo $producto['precio']; ?></td>
                             <td><?php echo $producto['in_stoke']; ?></td>
+                            <td><?php echo $producto['descuento']; ?>%</td>
                             <td>
                                 <img src="public/imgs/<?php echo $producto['img']; ?>" width="100" alt="img categorias">
                             </td>
-                            <td><?php echo $producto['id_cat_prod']; ?></td>
-                            <td><?php echo $producto['id_proveedor']; ?></td>
-                            <td>
+                            <td><?php echo $producto['cat_nombre']; ?></td>
+                            <td><?php echo $producto['prove_nombre']; ?></td>
+                            <td class="col-2">
                                 <a href="?borrar=<?php echo $producto['id_producto']; ?>" class="btn btn-danger" role="button">Eliminar</a> |
                                 <a href=".php?id=<?php echo $producto['id_producto']; ?>" class="btn btn-warning" role="button">Editar</a>
                             </td>
