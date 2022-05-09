@@ -1,4 +1,6 @@
 <?php
+    define('CLIENT_ID', 'AaSYGtWzGq_WcT359LImVHoToSGW8UVRaUgSsEIK-Tf5fNEnHdejInjpE4M_tgCDqYXVziWJFRqVFZvD');
+    define('CURRENCY', 'MXN');
     // Token para cifrar información.
     define("KEY_TOKEN", "APR.wqc-354*");
     define("MONEDA", "$");
