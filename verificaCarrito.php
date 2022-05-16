@@ -36,6 +36,7 @@
    <!-- Cuerpo Cotizar en Línea -->
    <section class="catalogo mt-4"> 
     <div class="container">
+        <h1 class="mt-4">Carrito de Compras</h1>
         <div class="table-responsive">
             <table class="table">
                 <thead>
