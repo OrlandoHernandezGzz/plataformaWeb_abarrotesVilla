@@ -52,13 +52,13 @@
           <img src="assets/img/oferta2.svg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/oferta3.png" class="d-block w-100" alt="...">
+          <img src="assets/img/oferta3.svg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/oferta4.png" class="d-block w-100" alt="...">
+          <img src="assets/img/oferta4.svg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/oferta5.png" class="d-block w-100" alt="...">
+          <img src="assets/img/oferta5.svg" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
