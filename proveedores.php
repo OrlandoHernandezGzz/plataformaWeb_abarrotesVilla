@@ -53,6 +53,7 @@
                 <h1 class="mt-4">Proveedores</h1>
                 <ol class="breadcrumb mb-4">
                     <a href="agregarProveedores.php" class="btn btn-success" role="button">Nuevo</a>
+                    <a href="reporteProveedores.php" class="btn btn-primary ms-2" role="button">Generar Reporte</a>
                 </ol>
                 <!-- Tabla para visualizar los datos -->
                 <table class="table">
