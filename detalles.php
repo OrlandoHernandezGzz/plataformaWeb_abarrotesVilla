@@ -64,6 +64,7 @@
    <!-- Cuerpo Cotizar en Línea -->
    <section class="detatalles mt-4"> 
     <div class="container">
+      <h1>Detalles del Producto</h1>
       <div class="row">
         <div class="col-md-6 order-md-1">
           <img src="public/imgs/<?php echo $row['img']; ?>" alt="imgDetalleProducto" width="80%" height="80%">
@@ -88,8 +89,8 @@
           <p class="lead"><?php echo $descripcion; ?></p>
           </div>
           <div class="d-grid gap-3 col-10 mx-auto">
-            <button class="btn btn-primary" type="button">Comprar Ahora</button>
-            <button class="btn btn-outline-primary" type="button" onclick="addProducto(<?php echo $idProd; ?>, '<?php echo $token_tmp; ?>')">Agregar al carrito</button>
+            <!-- <button class="btn btn-primary" type="button">Comprar Ahora</button> -->
+            <button class="btn btn-dark" type="button" onclick="addProducto(<?php echo $idProd; ?>, '<?php echo $token_tmp; ?>')">Agregar al carrito</button>
           </div>
         </div>
       </div>

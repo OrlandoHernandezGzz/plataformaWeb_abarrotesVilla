@@ -36,6 +36,7 @@
    <!-- Cuerpo Cotizar en Línea -->
    <section class="catalogo mt-4"> 
     <div class="container">
+        <h1 class="mt-4">Carrito de Compras</h1>
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -95,7 +96,7 @@
         <!-- Boton para el pago -->
         <div class="row">
             <div class="col-md-5 offset-md-7 d-grid gap-2">
-                <button class="btn btn-primary btn-lg">Realizar pago</button>
+                <a href="pago.php" class="btn btn-primary btn-lg">Realizar pago</a>
             </div>
         </div>
     </div>

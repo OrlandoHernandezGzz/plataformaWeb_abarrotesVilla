@@ -46,13 +46,19 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/img_carusel.png" class="d-block w-100" alt="...">
+          <img src="assets/img/oferta1.svg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/img_carusel.png" class="d-block w-100" alt="...">
+          <img src="assets/img/oferta2.svg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/img_carusel.png" class="d-block w-100" alt="...">
+          <img src="assets/img/oferta3.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/oferta4.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/oferta5.png" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
